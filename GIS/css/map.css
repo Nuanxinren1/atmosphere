@@ -1,0 +1,327 @@
+﻿html, body,#map {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    /*background-color: gainsboro;*/
+}
+
+
+/*地图DIV容器*/
+#mapdiv {
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    
+    position: relative;
+}
+
+/*地图对象*/
+#map {
+    width: 100%;
+    height: 100%;
+    background: #f8f8f8;
+}
+
+/*经纬度坐标*/
+#PositionBar {
+    position: absolute;
+    /*left: 15px;*/
+    right: 5px;
+    bottom: 32px;
+    z-index: 30;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/*比例尺*/
+.esriScalebar {
+       padding-top: 34px;
+    /* margin-bottom: -10px; */
+    /* margin-left: -10px; */
+    z-index: 30;
+    left: auto !important;
+    right: 108px !important;
+}
+
+.esriScalebarLabel {
+    display: none !important;
+}
+
+.esriScalebarSecondNumber {
+    display: block !important;
+    margin-left: 8px;
+	 left: -53%;
+}
+
+.scaleLabelDiv {
+    bottom: 11px;
+}
+
+/*提示框*/
+#mapdiv .tooltip {
+    opacity: 1;
+    width: auto;
+    padding-right: 20px;
+    background: #ffffff url('../IMG/drawedit/pencil.png') no-repeat;
+    background-position: right center;
+	 display: inline-block!important;
+}
+/*气监测值*/
+/*监测值*/
+#monitoringValue, #waterMonitoringValue {
+    width: 60px;
+    height: auto;
+    position: absolute;
+    top: 200px;
+    right: 25px;
+    font-size: 12px !important;
+    background-color: #fff;
+    z-index: 3;
+    display: none;
+    font-family: 'SimSun';
+}
+
+    #monitoringValue > span, #waterMonitoringValue > span {
+        width: 100%;
+        height: 20px;
+        line-height: 20px;
+        background-color: #fff;
+        box-shadow: 2px 3px 3px rgba(208,207,204,.8);
+        display: inline-block;
+        text-align: center;
+        font-size: 12px;
+        color: #109BA0;
+        list-style: none;
+    }
+
+    #monitoringValue ul, #waterMonitoringValue ul {
+        width: 100%;
+        height: 175px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        background-color: #fff;
+        margin-top: 5px;
+        box-shadow: 2px 2px 3px rgba(208,207,204,.8);
+    }
+
+        #monitoringValue ul li, #waterMonitoringValue ul li {
+            width: 100%;
+            height: 25px;
+            line-height: 25px;
+            text-align: center;
+            cursor: pointer;
+            color: #7D7D7D;
+            font-size: 13px;
+        }
+
+            #monitoringValue ul li.aqiactive, #waterMonitoringValue ul li.aqiactive {
+                color: #fff;
+                background: #08a1e2;
+            }
+/*<!--时间轴设置时间-->*/
+#setTime {
+    position: absolute;
+    bottom: 60px;
+    left: 5px;
+    border: 1px solid #ccc;
+    background-color: rgba(255,255,255,1);
+    width: 175px;
+    display: none;
+    z-index: 6666;
+}
+
+    #setTime .title {
+        padding-left: 5px;
+        width: 100%;
+        height: 25px;
+        line-height: 25px;
+        background-color: rgba(0,0,0,.6);
+        color: #fff;
+        font-size: 14px;
+    }
+
+    #setTime .input-group {
+        width: 100%;
+        margin: 5px auto;
+        float: left;
+        padding: 0 10px;
+    }
+
+    #setTime button {
+        width: 155px;
+        height: 25px;
+        line-height: 25px;
+        background-color: #2FBCC1;
+        color: #fff;
+        font-size: 13px;
+        border-radius: 2px;
+        margin: 5px 10px 10px;
+        border: none;
+    }
+
+    #setTime input[type="text"] {
+        /*padding: 2px 5px;
+        box-sizing: border-box;*/
+        background: url("../img/jspanel/clock.png") no-repeat 135px;
+        border: 1px solid #ccc;
+    }
+
+#startDate1, #startDate2 {
+    font-size: 13px;
+    padding: 2px 0;
+}
+
+#startDate1 {
+    display: none;
+}
+
+tr{
+    cursor: pointer;
+}
+
+label{
+    font-weight: normal;
+}
+/* 图例样式 */
+ div#legend {
+    width: 360px !important;
+    margin-left: 26px;
+    /* height: 155px; */
+    background-color: #fff;
+} 
+div#legtuli{
+    font-family: 'SimSun';
+    /* height: 22px; */
+    overflow-x: hidden;
+}
+td {
+    font-size: 12px;
+    font-family: 'SimSun';
+}
+ table#waterProtect{
+    position: relative;
+}
+table#waterProtect tr:nth-child(1) {
+    position: absolute;
+    top: 0rem;
+    left: 1rem;
+}
+table#waterProtect tr:nth-child(2) {
+    position: absolute;
+    top: 0rem;
+    left: 15rem;
+}
+table#waterProtect tr:nth-child(3) {
+    position: absolute;
+    top: 2.5rem;
+    left: 1rem;
+}
+table#waterProtect tr:nth-child(4) {
+    position: absolute;
+    top: 2.5rem;
+    left: 15rem;
+}
+table#waterProtect tr:nth-child(4) td:nth-child(1) {
+   width: 20px !important;
+} 
+table#onlineCompany tr:nth-child(1){
+    position: absolute;
+    top: 8rem;
+    left: 1rem;
+}
+table#onlineCompany tr:nth-child(2){
+    position: absolute;
+    top: 8rem;
+    left: 15rem;
+}
+table#onlineCompany tr:nth-child(3){
+    position: absolute;
+    top: 8rem;
+    left: 26rem;
+}
+table#onlineCompany tr:nth-child(4){
+    position: absolute;
+    top: 11rem;
+    left: 1rem;
+}
+table#onlineCompany tr:nth-child(5){
+    position: absolute;
+    top: 11rem;
+    left: 15rem;
+}
+table#onlineCompany tr:nth-child(6){
+    position: absolute;
+    top: 11rem;
+    left: 26rem;
+}
+table#onlineCompany tr:nth-child(7){
+    position: absolute;
+    top: 14rem;
+    left: 1rem;
+}
+table#onlineCompany tr:nth-child(8){
+    position: absolute;
+    top: 14rem;
+    left: 15rem;
+}
+table#onlineCompany tr:nth-child(9){
+    position: absolute;
+    top: 14rem;
+    left: 26rem;
+}
+table#pollutionProject tr:nth-child(1){
+    position: absolute;
+    top: 17rem;
+    left: 1rem;
+}
+table#pollutionProject tr:nth-child(2){
+    position: absolute;
+    top: 17rem;
+    left: 15rem;
+}
+table#pollutionProject tr:nth-child(3){
+    position: absolute;
+    top: 17rem;
+    left: 26rem;
+}
+table#pollutionProject tr:nth-child(4){
+    position: absolute;
+    top: 20rem;
+    left: 1rem;
+}
+table#pollutionProject tr:nth-child(5){
+    position: absolute;
+    top: 20rem;
+    left: 15rem;
+}
+table#nucAndRadia tr{
+    position: absolute;
+    top: 20rem;
+    left: 26rem;
+}
+table#soilImpComp tr{
+    position: absolute;
+    top: 23rem;
+    left: 1rem;
+}
+.tuliline {
+    width: 90%;
+    height: 1px;
+    background: rgb(189, 182, 182);
+    position: relative;
+    top: 5rem;
+    z-index: 10;
+    margin-left: 1rem;
+}
+i.glyphicon.glyphicon-chevron-down,i.glyphicon.glyphicon-chevron-up{
+    margin-left: 85%;
+}
+span.tulitext{
+    position: relative;
+    left:1rem;
+}

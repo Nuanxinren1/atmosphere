@@ -1,0 +1,308 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "microsoft yahei";
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	min-width: 600px;
+	overflow-x: hidden;
+}
+ul li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+/*头部*/
+#top{
+	height: 60px;
+	background: url(../img/bg.png) no-repeat center;
+	background-size:100% 100%;
+}
+#top > .logoImg{
+	margin-top: 8px;
+	margin-left: 20px;
+}
+.admin{
+	float: right;
+	height: 60px;
+	margin-right: 15px;
+}
+.admin > img{
+	float: left;
+	margin-top: 14px;
+    margin-right: 10px;
+}
+#adminMsg{
+	float: left;
+	color: #FFFFFF;
+	margin-top: 8px;
+}
+#adminMsg .name{
+	font-size: 14px;
+	color: #fff;
+}
+#adminMsg .unitName{
+	font-size: 12px;
+	opacity: 0.9;
+	padding-top: 2px;
+}
+/*地图部分*/
+#Container{
+	height: -webkit-calc(100% - 60px);
+	height: -moz-calc(100% - 60px);
+	height: calc(100% - 60px);
+	position: relative;
+}
+#map{
+	width: 100%;
+	height: 100%;
+}
+#topNav{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #f2f5f7;
+	box-shadow: 0px 2px 6px 0px 
+		rgba(98, 104, 109, 0.17);
+	padding-top: 10px;
+}
+.topNavLists{
+	padding: 0 15px;
+}
+.topNavLists li{
+	text-align: center;
+	width: 16.65%;
+	height: 60px;
+	line-height: 50px;
+	float: left;
+	background: url(../img/mebg_default.png) no-repeat center;
+	background-size:100% 100%;
+	color: #FFFFFF;
+	font-size: 16px;
+	cursor: pointer;
+}
+.topNavLists li i{
+	display: inline-block;
+	width: 38px;
+	height: 44px;
+	background-size:100% 100%!important;
+	vertical-align: middle;
+    margin-right: 10px;
+    margin-top: -6px;
+}
+.topNavLists li i.icon1{
+	background: url(../img/meicon_1qd.png) no-repeat center;
+}
+.topNavLists li i.icon2{
+	background: url(../img/meicon_2jc.png) no-repeat center;
+}
+.topNavLists li i.icon3{
+	background: url(../img/meicon_3sg.png) no-repeat center;
+}
+.topNavLists li i.icon4{
+	background: url(../img/meicon_4mn.png) no-repeat center;
+}
+.topNavLists li i.icon5{
+	background: url(../img/meicon_5nd.png) no-repeat center;
+}
+.topNavLists li i.icon6{
+	background: url(../img/meicon_6jc.png) no-repeat center;
+}
+.topNavLists li.active{
+	background: url(../img/mebg_press.png) no-repeat center;
+	background-size: 100% 100%;
+}
+#platformStartUpWindow{
+	position: absolute;
+	top: 90px;
+	right: 10px;
+}
+.comStartUp{
+	width: 160px;
+	height: 160px;
+	cursor: pointer;
+}
+.personStartUp{
+	background: url(../img/person_default.png) no-repeat center;
+	background-size: 100% 100%;
+}
+.personStartUp.active{
+	background: url(../img/person_pressed.png) no-repeat center;
+	background-size: 100% 100%;
+}
+.brainStartUp{
+	background: url(../img/brain_default.png) no-repeat center;
+	background-size: 100% 100%;
+}
+.brainStartUp.active{
+	background: url(../img/brain_pressed.png) no-repeat center;
+	background-size: 100% 100%;
+}
+/*右侧菜单面板*/
+#rightPannel{
+	display: none;
+	position: fixed;
+	top: 140px;
+	right: 0;
+	width:300px;
+	height: -webkit-calc(100% - 140px);
+	height: -moz-calc(100% - 140px);
+	height: calc(100% - 140px);
+	background-color: #f1f6f8;
+	border: solid 1px #e6e6e6;
+}
+#foldBtn{
+	width: 22px;
+	height: 72px;
+	background: url(../img/you.png) no-repeat center;
+	background-size: 100% 100%;
+	cursor: pointer;
+	position: absolute;
+	left: -22px;
+	top: 10px;
+}
+#foldBtn.active{
+	background: url(../img/zuo.png) no-repeat center;
+	background-size: 100% 100%;
+}
+.basisInfoMenu{
+	display: none;
+}
+.basisInfoMenu ul li{
+	width: 85%;
+	height: 45px;
+	line-height: 45px;
+	text-align: center;
+	margin: 10px auto;
+	border: 1px solid #E6E6E6;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.basisInfoMenu ul li i{
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	vertical-align: middle;
+	margin-right: 10px;
+	margin-top: -2px;
+	background-size: 100% 100%!important;
+}
+.basisInfoMenu ul li.active{
+	background: #4da0fb;
+	color: #FFFFFF;
+}
+.basisInfoMenu ul li:first-child i{
+	background: url(../img/menu/1zjxx_m.png) no-repeat center;
+}
+.basisInfoMenu ul li:first-child.active i{
+	background: url(../img/menu/1zjxx_x.png) no-repeat center;
+}
+.basisInfoMenu ul li:nth-child(2) i{
+	background: url(../img/menu/2jydw_m.png) no-repeat center;
+}
+.basisInfoMenu ul li:nth-child(2).active i{
+	background: url(../img/menu/2jydw_x.png) no-repeat center;
+}
+.basisInfoMenu ul li:nth-child(3) i{
+	background: url(../img/menu/3yjsb_m.png) no-repeat center;
+}
+.basisInfoMenu ul li:nth-child(3).active i{
+	background: url(../img/menu/3yjsb_x.png) no-repeat center;
+}
+.basisInfoMenu ul li:nth-child(4) i{
+	background: url(../img/menu/4sgal_m.png) no-repeat center;
+}
+.basisInfoMenu ul li:nth-child(4).active i{
+	background: url(../img/menu/4sgal_x.png) no-repeat center;
+}
+.basisInfoMenu ul li:nth-child(5) i{
+	background: url(../img/menu/5ylxx_m.png) no-repeat center;
+}
+.basisInfoMenu ul li:nth-child(5).active i{
+	background: url(../img/menu/5ylxx_x.png) no-repeat center;
+}
+.basisInfoMenu ul li:nth-child(6) i{
+	background: url(../img/menu/6czff_m.png) no-repeat center;
+}
+.basisInfoMenu ul li:nth-child(6).active i{
+	background: url(../img/menu/6czff_x.png) no-repeat center;
+}
+.sliderMenu{
+	display: none;
+}
+.accidentBackMenu {
+	display: none;
+}
+/* 基础信息展示部分 */
+.isShow{
+	width: 500px;
+	height: 300px;
+	border: 1px solid #4CB4DF;
+	position: absolute;
+	top: 150px;
+	right: 380px;
+	z-index:10;
+	background: rgba(151,255,255, 0.4);
+	color: black;
+	text-align: center;
+	font-size: 30px;
+	line-height: 300px;
+}
+.isShow>p{
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	z-index: 20;
+	color: black;
+	cursor: pointer;
+	font-weight: 600;
+	text-align: center;
+	line-height: 15px;
+	font-size: 20px;
+}
+/* 事故溯源展示部分 */
+.isHide{
+	width: 400px;
+	height: 300px;
+	border: 1px solid #4CB4DF;
+	position: absolute;
+	top: 150px;
+	right: 380px;
+	z-index: 10;
+	background: rgba(151, 255, 255, 0.4);
+	color: black;
+	text-align: center;
+	font-size: 30px;
+	line-height: 300px;
+}
+.isHide>p {
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	z-index: 20;
+	color: black;
+	cursor: pointer;
+	font-weight: 600;
+	text-align: center;
+	line-height: 15px;
+	font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+

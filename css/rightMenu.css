@@ -1,0 +1,90 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    width:100%;
+    height:100%;
+}
+.rightPanel{
+    width: 25rem;
+    height:100%;
+    box-sizing: border-box;
+    background-color: #f1f6f8;
+    float:right;
+    cursor: pointer;
+    font-size: 14px;
+}
+/*重置layUI*/
+.layui-colla-content{
+    padding: 0 15px;
+    border:1px solid transparent!important;
+}
+.layui-colla-title {
+    padding: 0 15px 0 35px;
+}
+.layui-colla-title {
+    color: #333;
+    background-color: transparent!important;
+}
+.layui-collapse,.layui-colla-item{
+    border:1px solid transparent!important;
+}
+.layui-colla-icon {
+    font-size: 12px;
+}
+.layui-colla-content p{
+    cursor: pointer;
+}
+/*重置layUI结束*/
+/*自定义*/
+.myItem {
+    margin: 0 1rem;
+}
+.myTitle{
+    font-weight: bold;
+}
+.myInner{
+    padding: 10px 0 10px 55px!important;
+}
+.myIcon{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left: 10px;
+    top: 13px;
+}
+.layActive{
+    background-color: #4da0fb!important;
+    border-radius: 4px;
+    color:#FFF;
+}
+.myNoCollapse i{
+    display: none !important;
+}
+.fcIcon{
+    background: url("../img/fc/fc.png") no-repeat;
+    background-size: 100% 100%;
+}
+.layActive .fcIcon{
+    background: url("../img/fc/fc1.png") no-repeat;
+    background-size: 100% 100%;
+}
+.wrIcon{
+    background: url("../img/fc/wr.png") no-repeat;
+    background-size: 100% 100%;
+}
+.layActive .wrIcon{
+    background: url("../img/fc/wr1.png") no-repeat;
+    background-size: 100% 100%;
+}
+.jkIcon{
+    background: url("../img/fc/jk.png") no-repeat;
+    background-size: 100% 100%;
+}
+.layActive .jkIcon{
+    background: url("../img/fc/jk1.png") no-repeat;
+    background-size: 100% 100%;
+}

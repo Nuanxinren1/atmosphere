@@ -1,0 +1,31 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.buttonBox{
+	text-align: right;
+}
+.btnStyle{
+	width: 100px;
+	height: 38px;
+	line-height: 38px;
+	border: 0;
+	border-radius: 2px;
+	text-align: center;
+	color: #FFFFFF;
+	transition: all .5s linear;
+	cursor: pointer;
+	outline: none;
+}
+.btnStyle:hover{
+	opacity: 0.8;
+	transition: all .5s linear;
+}
+/*保存按钮*/
+.btnSave{
+	background: #01b5af;
+}
+/*发送短信*/
+.btnSend{
+	background: #079ff6;
+}

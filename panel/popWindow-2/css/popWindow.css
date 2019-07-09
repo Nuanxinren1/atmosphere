@@ -1,0 +1,86 @@
+@charset "UTF-8";
+*{
+    margin:0;
+    padding:0;
+}
+html,body{
+    width:100%;
+    height:100%;
+    font-size: 13px;
+}
+ul,li,ol{
+    list-style: none;
+}
+.clearHeight:after{
+    content:"";
+    clear:both;
+    display: block;
+}
+.popTitle{
+    display: inline-block;
+    width:7rem;
+    text-align: right;
+}
+.popBox{
+    width:100%;
+    height: 250px;
+    box-sizing: border-box;
+    font-family: MicrosoftYaHei;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 30px;
+    color: #444444;
+}
+.textBox{
+    width:100%;
+    height: 100px;
+    line-height: 30px;
+    padding:10px 0;
+    border-bottom: 1px solid #E6E6E6;
+}
+.minCoinBox ul{
+    margin:15px 0
+}
+.minCoinBox li{
+    box-sizing: border-box;
+    width:33.3%;
+    height:50px;
+    float:left;
+    text-align: center;
+    padding: 10px 0 0 0;
+    cursor:pointer;
+}
+.minCoin:hover span{
+    color: #1e7bd5;
+    text-decoration: underline;
+}
+.minCoin i{
+    display: inline-block;
+    width:15px;
+    height:15px;
+    vertical-align: sub;
+}
+.fxyIcon{
+    background: url("../img/pop/fxy.png") no-repeat;
+    background-size: 100% 100%;
+}
+.xcIcon{
+    background: url("../img/pop/xc.png") no-repeat;
+    background-size: 100% 100%;
+}
+.jcdIcon{
+    background: url("../img/pop/jcd.png") no-repeat;
+    background-size: 100% 100%;
+}
+.zbIcon{
+    background: url("../img/pop/zb.png") no-repeat;
+    background-size: 100% 100%;
+}
+.yaIcon{
+    background: url("../img/pop/ya.png") no-repeat;
+    background-size: 100% 100%;
+}
+.bgIcon{
+    background: url("../img/pop/bg.png") no-repeat;
+    background-size: 100% 100%;
+}

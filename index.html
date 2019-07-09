@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="common/css/bootstrap.min.css" media="all">
+		<link rel="stylesheet" href="common/plugin/layui/css/layui.css" media="all">
+		<link rel="stylesheet" type="text/css" href="common/css/scroll_chrom.css"/>
+		<!--layer弹出层样式重写-->
+		<link rel="stylesheet" type="text/css" href="css/layerRewrite.css"/>
+		<!--右侧折叠菜单-->
+	    <link rel="stylesheet" href="css/rightMenu.css" media="all">
+	    <!--自定义样式-->
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+
+		<link rel='Stylesheet' type='text/css' href="http://123.160.246.203:8075/arcgis_js_api/library/3.27/3.27/dijit/themes/tundra/tundra.css" />
+    	<link rel='Stylesheet' type='text/css' href="http://123.160.246.203:8075/arcgis_js_api/library/3.27/3.27/esri/css/esri.css" />
+		<link href="gis/css/map.css" rel="stylesheet" />
+		<script src="gis/config//config.js"></script>
+		<script src="gis/config/mapconfig.js"></script>
+	</head>
+	<body>
+		<!--头部-->
+		<div id="top">
+			<img src="img/logo.png" class="logoImg"/>
+			<div class="admin">
+				<img src="img/admin.png"/>
+				<div id="adminMsg">
+					<p class="name">杨永山</p>
+					<p class="unitName">人员单位名称</p>
+				</div>
+			</div>
+		</div>
+		<!--地图容器-->
+		<div id="Container">
+			<!--地图部分-->
+			<div id="map">
+				
+			</div>
+			
+			<!--头部导航-->
+			<div id="topNav">
+				<ul class="topNavLists">
+					<li><i class="icon1"></i>平台启动</li>
+					<li><i class="icon2"></i>基础信息管理</li>
+					<li><i class="icon3"></i>事故溯源</li>
+					<li><i class="icon4"></i>模拟与风险评估</li>
+					<li><i class="icon5"></i>布点与综合监测</li>
+					<li><i class="icon6"></i>动态决策支持</li>
+				</ul>
+			</div>
+			<!--右侧平台启动-->
+			<div id="platformStartUpWindow">
+				<div class="comStartUp personStartUp" onclick="openWindow('接警信息输入','AlarmInformationForm.html')">
+					
+				</div>
+				<div class="comStartUp brainStartUp" onclick="promptTipsInfo('111')">
+					
+				</div>
+			</div>
+			<!--右侧面板-->
+			<div id="rightPannel">
+				<!--菜单折叠按钮-->
+				<div id="foldBtn"></div>
+				<!--基础信息菜单-->
+				<div class="basisInfoMenu">
+					<ul id="ul">
+						<li class="active"><i></i>专家信息</li>
+						<li><i></i>救援队伍</li>
+						<li><i></i>应急设备</li>
+						<li><i></i>事故案例</li>
+						<li><i></i>医疗信息</li>
+						<li><i></i>处置方法</li>
+					</ul>
+				</div>
+				<!--模拟与风险评估-->
+				<div class="sliderMenu">
+					<div class="layui-collapse rightLayerPanel" lay-accordion="">
+				        <div class="layui-colla-item myItem">
+				            <h2 class="layui-colla-title myTitle myNoCollapse">
+				            	<b class="myIcon jkIcon"></b>风险预报
+				            </h2>
+				            <div class="layui-colla-content"></div>
+				        </div>
+				        <div class="layui-colla-item myItem">
+				            <h2 class="layui-colla-title myTitle">
+				                <b class="myIcon wrIcon"></b>污染扩散预测
+				            </h2>
+				            <div class="layui-colla-content">
+				                <div class="layui-collapse" lay-accordion="">
+				                    <div class="layui-colla-item">
+										<h2 class="layui-colla-title"
+										>近距离预测</h2>
+				                        <div class="layui-colla-content myInner">
+				                            <p>非重气扩散预测</p>
+				                        </div>
+				                        <div class="layui-colla-content myInner">
+				                            <p>重气扩散预测</p>
+				                        </div>
+				                    </div>
+				                    <div class="layui-colla-item">
+				                        <h2 class="layui-colla-title">远距离预测</h2>
+				                        <div class="layui-colla-content myInner">
+				                            <p>CALPUFF</p>
+				                        </div>
+				                        <div class="layui-colla-content myInner">
+				                            <p>AERMOD</p>
+				                        </div>
+				                    </div>
+				                </div>
+				            </div>
+				        </div>
+				        <!--<div class="layui-colla-item">
+				            <div class="layui-card-header">动态更新判断系统</div>
+				        </div>-->
+				        <div class="layui-colla-item myItem">
+				            <h2 class="layui-colla-title myTitle myNoCollapse">
+				                <b class="myIcon jkIcon"></b>健康风险评估
+				            </h2>
+				            <div class="layui-colla-content"></div>
+				        </div>
+				    </div>
+				</div>
+				<!-- 事故溯源 -->
+				<div class="accidentBackMenu">
+					<div class="layui-collapse rightLayerPanel" lay-accordion="">
+						<div class="layui-colla-item myItem">
+							<h2 class="layui-colla-title myTitle layActive">
+								<b class="myIcon fcIcon"></b>
+								正向溯源
+							</h2>
+							<div class="layui-colla-content myInner a">
+								<p>物料守恒估算</p>
+							</div>
+							<div class="layui-colla-content myInner b">
+								<p>遥测估算</p>
+							</div>
+						</div>
+						<div class="layui-colla-item myItem">
+							<h2 class="layui-colla-title myTitle">
+								<b class="myIcon wrIcon"></b>反向溯源
+							</h2>
+							<div class="layui-colla-content myInner">
+								<p>关联系数反算技术</p>
+							</div>
+							<div class="layui-colla-content myInner">
+								<p>最优化反算技术</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 布点与综合监测 -->
+				<div class="emergencyMenu">
+					<div class="layui-collapse rightLayerPanel" lay-accordion="">
+						<div class="layui-colla-item myItem">
+							<h2 class="layui-colla-title myTitle layActive">
+								<b class="myIcon fcIcon"></b>
+								应急布点
+							</h2>
+							<div class="layui-colla-content myInner">
+								<p>污染扩散-模糊评价-后优化技术</p>
+							</div>
+							<div class="layui-colla-content myInner">
+								<p>多目标非线性优化布点技术</p>
+							</div>
+						</div>
+						<div class="layui-colla-item myItem">
+							<h2 class="layui-colla-title myTitle">
+								<b class="myIcon wrIcon"></b>综合检测
+							</h2>
+							<div class="layui-colla-content myInner">
+								<p>毒物识别</p>
+							</div>
+						<div class="layui-colla-content">
+							<div class="layui-collapse" lay-accordion="">
+								<div class="layui-colla-item">
+									<h2 class="layui-colla-title">应急现场展示</h2>
+										<div class="layui-colla-content myInner">
+											<p>现场在线监测浓度展示</p>
+										</div>
+										<div class="layui-colla-content myInner">
+											<p>现场视频、照片显示</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						</div>
+						<div class="layui-colla-item myItem">
+				            <h2 class="layui-colla-title myTitle myNoCollapse">
+				                <b class="myIcon jkIcon"></b>动态更新判断系统
+				            </h2>
+				            <div class="layui-colla-content"></div>
+				        </div>
+					</div>
+				</div>
+				<!-- 动态决策支持 -->
+				<div class="dynamicMenu">
+					<div class="layui-collapse rightLayerPanel" lay-accordion="">
+						<div class="layui-colla-item myItem">
+							<h2 class="layui-colla-title myTitle layActive">
+								<b class="myIcon fcIcon"></b>
+								专家电话/视频会商
+							</h2>
+							<div class="layui-colla-content myInner">
+								<p>指挥中心与现场</p>
+							</div>
+							<div class="layui-colla-content myInner">
+								<p>信息交互系统</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 点击显示部分 -->
+			<!-- 基础信息显示部分 -->
+			<div class="isShow" style="display: none;">
+				<div>
+					aaa
+				</div>
+				<div>
+					bbbbbb
+				</div>
+				<div>
+					cccccc
+				</div>
+				<div>
+					dddddd
+				</div>
+				<div>
+					eeeeee
+				</div>
+				<div>
+					fffffff
+				</div>
+				<p>✕</p>
+			</div>
+			<!-- 事故溯源展示部分 -->
+			<div class="isHide" style="display: none;">
+				<div>
+					qqqqqq
+				</div>
+				<div>
+					wwwwww
+				</div>
+				<p>✕</p>
+			</div>
+		</div>
+
+		<script src="common/js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="common/plugin/layui/layui.js" charset="utf-8"></script>
+		<script src="js/rightMenu.js" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+
+		
+
+		<!--自定义ArcGIS组件路径-->
+		<script type="text/javascript">
+			var dojoConfig = {
+				async: true,
+				packages: [
+					{ name: 'widgets', location: location.href.replace(/\/[^/]+$/, "") + '/gis/Scripts/widgets' },
+					{ name: 'plugins', location: location.href.replace(/\/[^/]+$/, "") + '/windy/plugins' }
+				]
+			};
+		</script>
+		<script src='http://123.160.246.203:8075/arcgis_js_api/library/3.27/3.27/init.js' type="text/javascript"></script>
+		
+		<script src="gis/Scripts/GISScripts/mapInit.js"></script>
+		<script src="gis/scripts//coustomTool.js"></script>
+		<script src="gis/scripts/mapMain.js"></script>
+	</body>
+</html>

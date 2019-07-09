@@ -1,0 +1,41 @@
+#mainTable{
+	padding: 20px;
+}
+.myTitle{
+	position: relative;
+	color: #4da0fb;
+	margin-bottom: 20px;
+}
+.myTitle:after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	display: block;
+	height: 1px;
+	background: #f2f2f2;
+	top: 50%;
+	z-index: -1;
+}
+.myTitle span{
+	display: inline-block;
+	background: #FFFFFF;
+	padding-right: 20px;
+}
+.myTable{
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 50px;
+}
+.myTable tr td{
+	padding: 7px 10px;
+	border: 1px solid #E5E5E5;
+}
+.addRight{
+	color: #6f6f6f;
+	background: #fafafa;
+	text-align: right;
+	width: 20%;
+}
+.btnSave{
+	margin-right: 20px;
+}

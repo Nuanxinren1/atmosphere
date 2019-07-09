@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/popWindow.css"/>
+</head>
+<body>
+    <div class="popBox clearHeight">
+        <div class="tabBox clearHeight">
+            <p>有毒物质选择</p>
+            <ul class="clearHeight">
+                <li class="minTab tabActive">二氧化硫</li>
+                <li class="minTab">一氧化碳</li>
+                <li class="minTab">一氧化氮</li>
+            </ul>
+        </div>
+        <div class="wrBox">
+            <div>
+            <span>更新时间：</span>
+            <span class="updateTime">2019年5月22日 10:00</span>
+        </div>
+            <div class="hdBox">
+                <p class="hdTitle myTitle">北京燕山石化</p>
+                <p class="jyBox">
+                    <span>建议：</span>
+                    <span>各类人群可正常活动</span>
+                </p>
+            </div>
+            <div class="ndBox clearHeight">
+                <div class="ndzBox">
+                    <p class="ndzTitle myTitle">实时浓度值</p>
+                    <p class="ndzMinBox">
+                        <span class="ndzNum">135</span>
+                        <span>ug/m³</span>
+                    </p>
+                </div>
+                <div class="wrwBox">
+                    <p class="wrwTitle myTitle">首要污染物</p>
+                    <p class="wrwMinBox">
+                        <span class="ndzNum">SO2</span>
+                    </p>
+                </div>
+            </div>
+            <div class="chartBox clearHeight">
+                <p class="chartTitleBox">
+                    <i></i>
+                    <span>首要污染物浓度变化折线图（ug/m³）</span>
+                </p>
+                <div class="wrLineChart" id="wr"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/echarts.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/pop2.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
